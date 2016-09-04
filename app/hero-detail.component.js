@@ -32,6 +32,10 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent.prototype.goBack = function () {
         window.history.back();
     };
+    HeroDetailComponent.prototype.save = function () {
+        this.heroService.update(this.hero)
+            .then(this.goBack);
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', hero_1.Hero)
